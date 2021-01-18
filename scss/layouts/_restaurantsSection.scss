@@ -1,0 +1,69 @@
+.restaurants
+{
+    a
+    {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.restaurant
+{
+    // background-color: pink;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    img
+    {
+        width: 100%;
+        border-radius: $borderRadiusCard $borderRadiusCard 0 0;
+        object-fit: cover;
+        height: 25vh;
+        box-shadow: $boxShadowCard;
+    }
+    .textOnImage
+    {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-color: $TertiaryColor;
+        color: darken($TertiaryColor, 40%);
+        font-size: .8rem;
+        padding: .3rem 1.5rem;
+        border-radius: $borderRadiusTextOnImage;
+    }
+}
+
+.restaurantInfo
+{
+    letter-spacing: .1px;
+    .cityName
+    {
+        font-weight: 100;
+        padding-top: 4px;
+        font-size: .9rem;
+    }
+}
+
+.flexCard
+{
+    display: flex;
+    flex: row wrap;
+    justify-content: space-between;
+    padding: .7rem;
+    border-radius: 0 0 $borderRadiusCard $borderRadiusCard;
+    box-shadow: $boxShadowCard;
+}
+
+.favoriteIcon
+{
+    color: #545454;
+    &::before
+    {
+        line-height: 2;
+    }
+    &:hover
+    {
+        color:#9356DC;
+    }
+}
