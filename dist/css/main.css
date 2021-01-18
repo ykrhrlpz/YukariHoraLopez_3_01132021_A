@@ -11,6 +11,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.pl-regular {
+  padding-left: 1.5rem;
+}
+
+.pl-small {
+  padding-left: 1rem;
+}
+
+.pb-small {
+  padding-bottom: .4rem;
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -57,10 +69,63 @@ header img {
 
 .process__list {
   background-color: #ededed;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   margin-bottom: 1rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   width: 100%;
+}
+
+.process .icon {
+  color: #878787;
+}
+
+.process .icon.active {
+  color: #9356DC;
+}
+
+ol {
+  counter-reset: number;
+  /*Reset Numbers*/
+  list-style-type: none !important;
+  /*Remove numbers from list*/
+  padding: 0.5em;
+}
+
+ol li {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.5em;
+  padding: 0.5em 0.5em 0.5em 30px;
+}
+
+ol li:before {
+  /* Insert Numbers */
+  position: absolute;
+  counter-increment: number;
+  content: counter(number);
+  /*Change design of Numbers*/
+  display: inline-block;
+  background: #9356DC;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: .8rem;
+  border-radius: 50%;
+  left: -10px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  /*Align in the middle vertically*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.restaurants {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+  background: linear-gradient(#ededed, #fff);
+  padding-bottom: 2rem;
 }
 
 .restaurants a {
@@ -68,10 +133,16 @@ header img {
   color: #000;
 }
 
+.restaurants__heading {
+  font-size: 1.2rem;
+  padding: 2rem 0 1.5rem 1rem;
+}
+
 .restaurant {
   width: 90%;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .restaurant img {
@@ -133,6 +204,24 @@ header img {
   color: #9356DC;
 }
 
+.footerSection {
+  background-color: #545454;
+  color: #fff;
+  padding: 1.5rem;
+  letter-spacing: .5px;
+}
+
+.footerSection img {
+  -webkit-filter: grayscale(1) invert(1);
+          filter: grayscale(1) invert(1);
+  height: 3vh;
+  margin-bottom: 1rem;
+}
+
+.footerSection__menu--thin {
+  font-weight: 300;
+}
+
 .catButton {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
@@ -141,5 +230,7 @@ header img {
   padding: 1rem 1.3rem;
   border-radius: 2rem;
   margin-bottom: 3rem;
+  cursor: pointer;
+  letter-spacing: .5px;
 }
 /*# sourceMappingURL=main.css.map */

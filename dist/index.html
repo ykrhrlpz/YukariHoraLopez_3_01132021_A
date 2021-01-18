@@ -24,11 +24,15 @@
     </section>
     <section class="process">
         <h2 class="process__heading">How it works</h2>
-        <div class="process__list"><i class="fas fa-mobile-alt"></i><span>Choose a restaurant</span></div>
-        <div class="process__list"><i class="fas fa-list-ul"></i></i><span>Create your menu</span></div>
-        <div class="process__list"><i class="fas fa-store"></i></i><span>Go enjoy it at the restaurant</span></div>
+        <ol>
+            <li class="process__list"><i class="fas fa-mobile-alt icon"></i><span class="pl-regular">Choose a restaurant</span></li>
+            <li class="process__list"><i class="fas fa-list-ul icon"></i></i><span class="pl-regular">Create your menu</span></li>
+            <li class="process__list"><i class="fas fa-store icon active"></i></i><span class="pl-regular">Go enjoy it at the restaurant</span></li>
+        </ol>
+        
     </section>
     <section class="restaurants">
+        <h2 class="restaurants__heading">Restaurants</h2>
         <a href="#">
             <div class="restaurant">
                 <div>
@@ -46,13 +50,67 @@
                 </div>
             </div>
         </a>
+
+        <a href="#">
+            <div class="restaurant">
+                <div>
+                    <img src="./img/restaurants/theEnchantedPlate.jpg" alt="The Enchanted Pallette Image">
+                    <div class="textOnImage">New</div>
+                </div>
+                <div class="flexCard">
+                    <div class="restaurantInfo">
+                        <p class="restautantsName">The Full Pallette</p>
+                        <p class="cityName">New York</p>
+                    </div>
+                    <div>
+                        <i class="far fa-heart favoriteIcon"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="restaurant">
+                <div>
+                    <img src="./img/restaurants/bastille.jpg" alt="Bastille Image">
+                    <div class="textOnImage">New</div>
+                </div>
+                <div class="flexCard">
+                    <div class="restaurantInfo">
+                        <p class="restautantsName">The Full Pallette</p>
+                        <p class="cityName">New York</p>
+                    </div>
+                    <div>
+                        <i class="far fa-heart favoriteIcon"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="#">
+            <div class="restaurant">
+                <div>
+                    <img src="./img/restaurants/leGourmand.jpg" alt="Le Gourmand Image">
+                    <div class="textOnImage">New</div>
+                </div>
+                <div class="flexCard">
+                    <div class="restaurantInfo">
+                        <p class="restautantsName">The Full Pallette</p>
+                        <p class="cityName">New York</p>
+                    </div>
+                    <div>
+                        <i class="far fa-heart favoriteIcon"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
     </section>
-    <footer>
+    <footer class="footerSection">
         <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
-        <div><i class="fas fa-utensils"></i><span>Suggest a restaurant</span></div>
-        <div><i class="fas fa-hands-helping"></i></i><span>Become a partner</span></div>
-        <div>Legal</div>
-        <div>Contact</div>
+        <div class="pb-small"><i class="fas fa-utensils"></i><span class="pl-small">Suggest a restaurant</span></div>
+        <div class="pb-small"><i class="fas fa-hands-helping"></i></i><span class="pl-small">Become a partner</span></div>
+        <div class="footerSection__menu--thin pb-small">Legal</div>
+        <div class="footerSection__menu--thin pb-small">Contact</div>
     </footer>
 </body>
 </html>

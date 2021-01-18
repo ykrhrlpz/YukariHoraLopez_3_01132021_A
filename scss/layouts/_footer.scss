@@ -1,0 +1,19 @@
+.footerSection
+{
+    background-color: #545454;
+    color: #fff;
+    padding: 1.5rem;
+    letter-spacing: .5px;
+
+    img
+    {
+        filter: grayscale(1) invert(1);
+        height: 3vh;
+        margin-bottom: 1rem;
+    }
+    &__menu--thin
+    {
+        font-weight: 300;
+    }
+    
+}
