@@ -1,0 +1,17 @@
+.process
+{
+    margin: 0 1rem 3rem 1rem;
+    &__heading
+    {
+        font-size: 1.2rem;
+        padding: 2rem 0 1.5rem 0;
+    }
+    &__list
+    {
+        background-color: lighten(lighten(#545454, 30%), 30%);
+        padding: 2rem;
+        margin-bottom: 1rem;
+        border-radius: 2rem;
+        width: 100%;
+    }
+}

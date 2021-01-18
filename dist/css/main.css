@@ -46,6 +46,23 @@ header img {
   font-weight: 200;
 }
 
+.process {
+  margin: 0 1rem 3rem 1rem;
+}
+
+.process__heading {
+  font-size: 1.2rem;
+  padding: 2rem 0 1.5rem 0;
+}
+
+.process__list {
+  background-color: #ededed;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+
 .restaurants a {
   text-decoration: none;
   color: #000;
