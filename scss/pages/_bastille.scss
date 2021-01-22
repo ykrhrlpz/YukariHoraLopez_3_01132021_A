@@ -1,0 +1,53 @@
+.pageLayout
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.main
+{
+   
+    img
+    {
+        width: 100%;
+        object-fit: cover;
+    }
+    h3
+    {
+        margin-left: 5%;
+      
+    }
+}
+.mainContainer
+{
+    transform: translateY(-4rem);
+    background-color: grey;
+    border-radius: 2rem 2rem 0 0;
+    background-color: lighten(#545454, 50%);
+    margin-bottom: -4rem;
+    .title
+    {
+        padding-top: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        font-family: $LogoTitleFont;
+        letter-spacing: .7px;
+        font-size: 1.2rem;
+    }
+    .enrees h3,
+    .mainDish h3,
+    .desserts h3
+    {
+        border-bottom: 1px solid pink;
+
+    }
+
+}
+.button
+{
+    text-align: center;
+    padding: 2rem 0 4rem 0;
+}

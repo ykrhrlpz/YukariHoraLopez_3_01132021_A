@@ -4,7 +4,6 @@
     color: #fff;
     padding: 1.5rem;
     letter-spacing: .5px;
-
     img
     {
         filter: grayscale(1) invert(1);
@@ -15,5 +14,8 @@
     {
         font-weight: 300;
     }
-    
+    // &__menuPage
+    // {
+    //     transform: translateY(-4rem);
+    // }
 }

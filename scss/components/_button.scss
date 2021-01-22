@@ -7,5 +7,11 @@
     border-radius: 2rem;
     margin-bottom: 3rem;
     cursor: pointer;
-    letter-spacing: .5px
+    letter-spacing: .5px;
+    &__order
+    {
+        padding: 1rem 2rem;
+        width: 45vw;
+        margin: 0;
+    }
 }

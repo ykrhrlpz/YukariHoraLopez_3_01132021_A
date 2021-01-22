@@ -63,15 +63,20 @@
     box-shadow: $boxShadowCard;
 }
 
-.favoriteIcon
-{
-    color: #545454;
-    &::before
-    {
-        line-height: 2;
-    }
-    &:hover
-    {
-        color:#9356DC;
-    }
-}
+// .favoriteIcon
+// {
+//     color: #545454;
+//     &--outline
+//     {
+//         &::before
+//         {
+//             line-height: 2;
+//             display: inline-block;
+//         }
+//         &:hover
+//         {
+//             display: none;
+//         }
+//     }
+// }
+    
