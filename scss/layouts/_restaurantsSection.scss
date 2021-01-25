@@ -1,7 +1,8 @@
 .restaurants
 {
-    background: linear-gradient(lighten(lighten(#545454, 30%), 30%), #fff);
-    padding-bottom: 2rem;
+    background: linear-gradient(#F6F6F6, #fff);
+    padding-bottom: 3rem;
+    padding-top: 1.6rem;
     a
     {
         text-decoration: none;
@@ -16,7 +17,6 @@
 
 .restaurant
 {
-    // background-color: pink;
     width: 90%;
     margin: 0 auto;
     position: relative;

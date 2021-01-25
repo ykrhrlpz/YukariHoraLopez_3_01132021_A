@@ -13,9 +13,11 @@
     &__menu--thin
     {
         font-weight: 300;
+        a
+        {
+            color: #fff;
+            text-decoration: none;
+        }
     }
-    // &__menuPage
-    // {
-    //     transform: translateY(-4rem);
-    // }
+    
 }

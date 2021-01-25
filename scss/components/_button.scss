@@ -1,6 +1,6 @@
-.catButton
+.primaryButton
 {
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: $buttonColor;
     border: none;
     color: #fff;
     padding: 1rem 1.3rem;
@@ -8,6 +8,12 @@
     margin-bottom: 3rem;
     cursor: pointer;
     letter-spacing: .5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    &:hover
+    {
+        @include buttonHover;
+    }
+    
     &__order
     {
         padding: 1rem 2rem;

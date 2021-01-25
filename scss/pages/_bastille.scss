@@ -22,29 +22,35 @@
 {
     transform: translateY(-4rem);
     background-color: grey;
-    border-radius: 2rem 2rem 0 0;
-    background-color: lighten(#545454, 50%);
+    border-radius: 3rem 3rem 0 0;
+    background-color: #F6F6F6;
     margin-bottom: -4rem;
     .title
     {
-        padding-top: 2rem;
+        padding-top: 3rem;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
         font-family: $LogoTitleFont;
         letter-spacing: .7px;
         font-size: 1.2rem;
     }
-    .enrees h3,
+    .entrees h3,
     .mainDish h3,
     .desserts h3
     {
-        border-bottom: 1px solid pink;
-
+        font-weight: 300;
+        &::after {
+            content: ""; /* This is necessary for the pseudo element to work. */ 
+            display: block; /* This will put the pseudo element on its own line. */
+            margin-left: 0; /* This will center the border. */
+            width: 2.8rem; /* Change this to whatever width you want. */
+            padding-top: .5rem; /* This creates some space between the element and the border. */
+            border-bottom: 3px solid darken($TertiaryColor, 10%); /* This creates the border. Replace black with whatever color you want. */
+        }
     }
-
 }
 .button
 {

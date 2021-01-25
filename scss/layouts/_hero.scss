@@ -1,10 +1,10 @@
 .hero
 {
     text-align: center;
-    background-color: lighten(lighten(#545454, 30%), 30%);
+    background-color: #F6F6F6;
     .location
     {
-        background-color: lighten(#545454, 50%);
+        background-color: #EAEAEA;
         padding: 1rem 0;
     }
     &__heading

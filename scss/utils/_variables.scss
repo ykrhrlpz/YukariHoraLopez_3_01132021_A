@@ -12,3 +12,5 @@ $TertiaryColor: #99E2D0;
 $borderRadiusCard: 10px;
 $borderRadiusTextOnImage: 2px;
 $boxShadowCard: 10px 10px 30px rgba(0, 0, 0, 0.1);
+$buttonColor: linear-gradient(#FF79DA, #9356DC);
+$tenLightenButtonColor: linear-gradient(lighten(#FF79DA, 10%), lighten(#9356DC, 10%));

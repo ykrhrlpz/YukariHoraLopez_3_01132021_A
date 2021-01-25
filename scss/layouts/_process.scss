@@ -1,6 +1,7 @@
 .process
 {
     margin: 0 1rem 3rem 1rem;
+    padding-top: 1.4rem;
     &__heading
     {
         font-size: 1.2rem;
@@ -8,16 +9,20 @@
     }
     &__list
     {
-        background-color: lighten(lighten(#545454, 30%), 30%);
+        background-color: #F6F6F6;
         padding: 1.5rem 2rem;
         margin-bottom: 1rem;
         border-radius: 1.5rem;
         width: 100%;
-
+        box-shadow: 0 4px 10px rgba(0,0,0,.1);
+        &.activeList
+        {
+            background-color: rgba($PrimaryColor, .1);
+        }
     }
     .icon
     {
-        color: lighten(#545454, 20%);
+        color: darken(#F6F6F6, 60%);
         &.active
         {
             color: $PrimaryColor;
