@@ -1,8 +1,12 @@
-.restaurants
+.restaurantSection
 {
     background: linear-gradient(#F6F6F6, #fff);
     padding-bottom: 3rem;
     padding-top: 1.6rem;
+    @include responsiveness('large') 
+    {
+        padding: 0;
+    }
     a
     {
         text-decoration: none;
@@ -12,8 +16,31 @@
     {
         font-size: 1.2rem;
         padding: 2rem 0 1.5rem 1rem;
+        
+    }
+    @include responsiveness('large') 
+    {
+        h2
+        {
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 1.5rem;
+        }
+    }
+    
+}
+.restaurants
+{
+    @include responsiveness('large') 
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 4rem;
     }
 }
+
 
 .restaurant
 {
@@ -21,13 +48,25 @@
     margin: 0 auto;
     position: relative;
     margin-bottom: 1rem;
+    @include responsiveness('large') 
+    {
+        width: 18vw;
+        height: auto;
+        margin: 0;
+    }
     img
     {
         width: 100%;
         border-radius: $borderRadiusCard $borderRadiusCard 0 0;
         object-fit: cover;
-        height: 25vh;
+        height: 15vh;
         box-shadow: $boxShadowCard;
+
+        @include responsiveness('large')
+        {
+            height: 13rem;
+
+        }
     }
     .textOnImage
     {
@@ -39,17 +78,38 @@
         font-size: .8rem;
         padding: .3rem 1.5rem;
         border-radius: $borderRadiusTextOnImage;
+        @include responsiveness('large') 
+        {
+            font-size: 1rem;
+            padding: .4rem 1.5rem;
+        }
     }
+
 }
 
 .restaurantInfo
 {
     letter-spacing: .1px;
+   
     .cityName
     {
         font-weight: 100;
         padding-top: 4px;
         font-size: .9rem;
+    }
+    @include responsiveness('large') 
+    {
+        .restautantsName
+        {
+            font-size: 1.2rem;
+            padding: .2rem 0 .2rem .2rem;
+            
+        }
+        .cityName
+        {
+            font-size: 1rem;
+            padding: .2rem 0 .2rem .2rem;
+        }
     }
 }
 

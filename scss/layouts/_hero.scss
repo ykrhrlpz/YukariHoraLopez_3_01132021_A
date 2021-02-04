@@ -2,19 +2,39 @@
 {
     text-align: center;
     background-color: #F6F6F6;
-    .location
-    {
-        background-color: #EAEAEA;
-        padding: 1rem 0;
-    }
+    padding: 3rem;
     &__heading
     {
-        margin: 2rem 0;
+        // padding: 2rem 0;
+        @include responsiveness('large')
+        {
+            font-size: 2rem;
+            padding: 0;
+        }
     }
     &__byline
     {
-        margin: 2rem 0;
-        padding: 0 2rem;
+        // margin: 2rem 0;
+        // padding: 0 2rem;
         font-weight: 200;
+        @include responsiveness('large')
+        {
+            font-size: 1.5rem;
+            letter-spacing: .3px;
+            // margin-bottom: 3rem;
+        }
+    }
+    &__body
+    {
+        @include responsiveness('large')
+        {
+            height: 35vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            // padding: 2rem 0;
+        }
     }
 }

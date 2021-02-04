@@ -6,18 +6,28 @@
     {
         font-size: 1.2rem;
         padding: 2rem 0 1.5rem 0;
+        @include responsiveness('large') 
+        {
+            text-align: center;
+            padding: 3rem 0;
+            font-size: 1.5rem;
+        }
     }
     &__list
     {
         background-color: #F6F6F6;
         padding: 1.5rem 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
         border-radius: 1.5rem;
         width: 100%;
         box-shadow: 0 4px 10px rgba(0,0,0,.1);
         &.activeList
         {
             background-color: rgba($PrimaryColor, .1);
+        }
+        @include responsiveness('large')
+        {
+            width: 25%;
         }
     }
     .icon
@@ -30,19 +40,35 @@
     }
 }
 
-ol {
+@include responsiveness('large')
+{
+    .procedure
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 5rem;
+    }
+}
+
+ol 
+{
     counter-reset: number; /*Reset Numbers*/
     list-style-type: none!important; /*Remove numbers from list*/
     padding: 0.5em;
-  }
-  ol li {
+}
+
+ol li 
+{
     position: relative;
     padding-left: 30px;
     line-height: 1.5em;
     padding: 0.5em 0.5em 0.5em 30px;
-  }
+}
   
-  ol li:before{
+ol li::before
+{
     /* Insert Numbers */
     position: absolute;
     counter-increment: number;
@@ -63,4 +89,4 @@ ol {
     /*Align in the middle vertically*/
     top: 50%;
     transform: translateY(-50%);
-  }
+}

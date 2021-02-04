@@ -9,6 +9,10 @@
         filter: grayscale(1) invert(1);
         height: 3vh;
         margin-bottom: 1rem;
+        @include responsiveness('large')
+        {
+            margin: 0;
+        }
     }
     &__menu--thin
     {
@@ -19,5 +23,14 @@
             text-decoration: none;
         }
     }
-    
+    @include responsiveness('large')
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        height: 25vh;
+        font-size: 1.2rem;
+    }
 }

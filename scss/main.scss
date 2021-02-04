@@ -2,7 +2,9 @@
 @import "./base/loader";
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./base/responsive";
 @import "./base/base";
+
 
 @import "./layouts/header";
 @import "./layouts/hero";
@@ -11,7 +13,7 @@
 @import "./layouts/footer";
 
 
-@import "./components/button";
+@import "./components/buttons";
 @import "./components/menuCard";
 
 @import "./pages/bastille";

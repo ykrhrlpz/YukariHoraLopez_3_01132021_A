@@ -6,11 +6,14 @@
 
 .main
 {
-   
     img
     {
         width: 100%;
         object-fit: cover;
+        @include responsiveness('large')
+        {
+            height: 80vh;
+        }
     }
     h3
     {
@@ -21,10 +24,16 @@
 .mainContainer
 {
     transform: translateY(-4rem);
-    background-color: grey;
     border-radius: 3rem 3rem 0 0;
     background-color: #F6F6F6;
     margin-bottom: -4rem;
+    @include responsiveness('large')
+    {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+    }
     .title
     {
         padding-top: 3rem;
@@ -36,7 +45,26 @@
         font-family: $LogoTitleFont;
         letter-spacing: .7px;
         font-size: 1.2rem;
+        @include responsiveness('large')
+        {
+            width: 45%;
+        }
     }
+
+    .entrees,
+    .mainDish,
+    .desserts
+    {
+        @include responsiveness('large')
+        {
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+        }
+    }
+
     .entrees h3,
     .mainDish h3,
     .desserts h3
@@ -56,4 +84,50 @@
 {
     text-align: center;
     padding: 2rem 0 4rem 0;
+}
+
+.menuCard 
+{
+    position: relative;
+
+    // .menuCard__heading, 
+    // .menuCard__content
+    // {
+    // display: block;
+    // width: 100%;
+    // height: auto;
+    // }
+
+    .overlay 
+    {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: $TertiaryColor;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    }
+
+    &:hover 
+    {
+        .overlay 
+        {
+            width: 15%;
+            right: 0;
+        }
+    }
+
+    .text 
+    {
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    }
 }
