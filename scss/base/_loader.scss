@@ -1,13 +1,13 @@
-
-
-.loading 
+#loading 
 {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: loader 3s ease-in 1s both;
 
+    // animation-fill-mode: forwards;
   div 
   {
     width: 1rem;
@@ -29,9 +29,21 @@
   }
 }
 
-@keyframes bounce {
-  to {
+@keyframes bounce 
+{
+  to 
+  {
     opacity: 0.3;
     transform: translate3d(0, -1rem, 0);
+  }
+}
+
+
+@keyframes loader {
+  to 
+  {
+      width:0;
+      height:0;
+      overflow: hidden;
   }
 }

@@ -3,13 +3,25 @@
     text-align: center;
     background-color: #F6F6F6;
     padding: 3rem;
+    @include responsiveness('large')
+    {
+        background-image: url(../../dist/img/restaurants/bastille.jpg);
+        color: #fff;
+        height: 80vh;
+        &__background
+        {
+            background-color: #000;
+            opacity: .5;
+        }
+    }
     &__heading
     {
         // padding: 2rem 0;
         @include responsiveness('large')
         {
-            font-size: 2rem;
+            font-size: 3rem;
             padding: 0;
+            margin-bottom: 1.5rem;
         }
     }
     &__byline
@@ -19,9 +31,10 @@
         font-weight: 200;
         @include responsiveness('large')
         {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             letter-spacing: .3px;
-            // margin-bottom: 3rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
         }
     }
     &__body
@@ -33,7 +46,7 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+           
             // padding: 2rem 0;
         }
     }

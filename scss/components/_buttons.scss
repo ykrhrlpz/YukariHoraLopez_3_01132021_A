@@ -19,13 +19,14 @@
         @include responsiveness('large') 
         {
             width: 20vw;
+
         }
 
     }
     @include responsiveness('large') 
     {
-        font-size: 1rem;
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
         border-radius: 4rem;
     }
 }

@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-.loading {
+#loading {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -19,9 +19,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: loader 3s ease-in 1s both;
+          animation: loader 3s ease-in 1s both;
 }
 
-.loading div {
+#loading div {
   width: 1rem;
   height: 1rem;
   margin: 2rem 0.3rem;
@@ -31,12 +33,12 @@
           animation: 0.9s bounce infinite alternate;
 }
 
-.loading div:nth-child(2) {
+#loading div:nth-child(2) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-.loading div:nth-child(3) {
+#loading div:nth-child(3) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
@@ -57,8 +59,25 @@
   }
 }
 
+@-webkit-keyframes loader {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+@keyframes loader {
+  to {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  color: #3f3e3e;
 }
 
 .pl-regular {
@@ -75,6 +94,46 @@ body {
 
 .mt-regular {
   margin-top: 1.5rem;
+}
+
+@-webkit-keyframes like-outline {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes like-outline {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes like-solid {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes like-solid {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header {
@@ -132,7 +191,8 @@ body {
     font-size: 1.5rem;
     padding: .5rem 0;
     height: 3rem;
-    line-height: 2rem;
+    line-height: 3rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -143,9 +203,22 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .hero {
+    background-image: url(../../dist/img/restaurants/bastille.jpg);
+    color: #fff;
+    height: 80vh;
+  }
+  .hero__background {
+    background-color: #000;
+    opacity: .5;
+  }
+}
+
+@media (min-width: 1200px) {
   .hero__heading {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -155,8 +228,10 @@ body {
 
 @media (min-width: 1200px) {
   .hero__byline {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: .3px;
+    font-weight: 400;
+    margin-bottom: 2rem;
   }
 }
 
@@ -176,7 +251,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
   }
 }
 
@@ -306,6 +380,9 @@ ol li::before {
 }
 
 @media (min-width: 1200px) {
+  .restaurantSection {
+    height: 80vh;
+  }
   .restaurantSection h2 {
     text-align: center;
     padding: 3rem 0;
@@ -335,6 +412,10 @@ ol li::before {
   margin: 0 auto;
   position: relative;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 @media (min-width: 1200px) {
@@ -351,8 +432,6 @@ ol li::before {
   -o-object-fit: cover;
      object-fit: cover;
   height: 15vh;
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 1200px) {
@@ -377,6 +456,13 @@ ol li::before {
     font-size: 1rem;
     padding: .4rem 1.5rem;
   }
+}
+
+.restaurant:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .restaurantInfo {
@@ -412,8 +498,35 @@ ol li::before {
           justify-content: space-between;
   padding: .7rem;
   border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.favoriteIcon:before {
+  content: '\f004';
+  color: #3f3e3e;
+  font-size: 1.5rem;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 200;
+}
+
+.favoriteIcon:hover:before {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #9356DC;
+}
+
+.placeInMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footerSection {
@@ -461,7 +574,7 @@ ol li::before {
         -ms-flex-align: center;
             align-items: center;
     gap: 2.5rem;
-    height: 25vh;
+    height: 10vh;
     font-size: 1.2rem;
   }
 }
@@ -498,39 +611,47 @@ ol li::before {
 
 @media (min-width: 1200px) {
   .primaryButton {
-    font-size: 1rem;
-    padding: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 4rem;
   }
 }
 
 .menuCard {
-  width: 90%;
-  height: auto;
-  background-color: #fff;
+  height: 5rem;
   margin: 1rem auto;
   border-radius: 1rem;
 }
 
-.menuCard__heading {
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
-
-.menuCard__content {
+.menuCard .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrp;
-          flex-flow: row wrp;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: .5rem 1rem 1rem 1rem;
+}
+
+.menuCard__left {
+  font-size: 1.2rem;
+  width: auto;
+}
+
+.menuCard__left p:nth-child(1) {
+  font-weight: 700;
+}
+
+.menuCard__left p:nth-child(2) {
+  font-weight: 300;
+}
+
+.menuCard__right {
+  line-height: 5rem;
+  font-weight: 700;
 }
 
 .pageLayout {
@@ -551,7 +672,7 @@ ol li::before {
 
 @media (min-width: 1200px) {
   .main img {
-    height: 80vh;
+    height: 40vh;
   }
 }
 
@@ -608,6 +729,13 @@ ol li::before {
   }
 }
 
+.mainContainer .entrees,
+.mainContainer .mainDish,
+.mainContainer .desserts {
+  -webkit-animation: slideUp .5s linear 1;
+          animation: slideUp .5s linear 1;
+}
+
 @media (min-width: 1200px) {
   .mainContainer .entrees,
   .mainContainer .mainDish,
@@ -657,24 +785,97 @@ ol li::before {
 
 .menuCard {
   position: relative;
+  width: 50rem;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.menuCard .overlay {
+.menuCard .middle {
   position: absolute;
   bottom: 0;
-  left: 100%;
+  left: calc(100% - 5rem);
   right: 0;
   background-color: #99E2D0;
-  overflow: hidden;
-  width: 0;
+  width: 5rem;
   height: 100%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  border-radius: 0 16px 16px 0;
+  z-index: 10;
+  -webkit-transform: translateX(6rem);
+          transform: translateX(6rem);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-.menuCard:hover .overlay {
-  width: 15%;
-  right: 0;
+.menuCard .background {
+  z-index: 1;
+  background-color: white;
+  height: 5rem;
+  width: 50rem;
+  position: relative;
+  border-radius: 16px;
+}
+
+.menuCard .card {
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 50rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.menuCard .card .menuCard__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: .8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 1rem;
+  height: 5rem;
+}
+
+.menuCard .card .menuCard__right {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menuCard:hover {
+  cursor: pointer;
+}
+
+.menuCard:hover .middle {
+  height: 5rem;
+  z-index: 10;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menuCard:hover .menuCard__right {
+  -webkit-transform: translateX(-5rem);
+          transform: translateX(-5rem);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menuCard:hover .fa-check-circle {
+  -webkit-animation: rotate .5s linear 1;
+          animation: rotate .5s linear 1;
 }
 
 .menuCard .text {
@@ -686,42 +887,50 @@ ol li::before {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   white-space: nowrap;
+  z-index: 10;
 }
 
-.test {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-.card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 0 80%;
-          flex: 2 0 80%;
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
-.overlay2 {
-  background-color: red;
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: scaleY(-10px);
+            transform: scaleY(-10px);
+  }
+  100% {
+    -webkit-transform: scaleY(0px);
+            transform: scaleY(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: scaleY(-10px);
+            transform: scaleY(-10px);
+  }
+  100% {
+    -webkit-transform: scaleY(0px);
+            transform: scaleY(0px);
+  }
 }
 /*# sourceMappingURL=main.css.map */

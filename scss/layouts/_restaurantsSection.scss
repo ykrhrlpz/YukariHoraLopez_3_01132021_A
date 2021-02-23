@@ -20,6 +20,7 @@
     }
     @include responsiveness('large') 
     {
+        height: 80vh;
         h2
         {
             text-align: center;
@@ -48,6 +49,8 @@
     margin: 0 auto;
     position: relative;
     margin-bottom: 1rem;
+    box-shadow: $boxShadowCard;
+    transition: .25s;
     @include responsiveness('large') 
     {
         width: 18vw;
@@ -60,7 +63,7 @@
         border-radius: $borderRadiusCard $borderRadiusCard 0 0;
         object-fit: cover;
         height: 15vh;
-        box-shadow: $boxShadowCard;
+        // box-shadow: $boxShadowCard;
 
         @include responsiveness('large')
         {
@@ -83,6 +86,11 @@
             font-size: 1rem;
             padding: .4rem 1.5rem;
         }
+    }
+    &:hover
+    {
+        transform: scale(1.02);
+        box-shadow: $boxShadowCardHover;
     }
 
 }
@@ -120,23 +128,30 @@
     justify-content: space-between;
     padding: .7rem;
     border-radius: 0 0 $borderRadiusCard $borderRadiusCard;
-    box-shadow: $boxShadowCard;
+    // box-shadow: $boxShadowCard;
 }
 
-// .favoriteIcon
-// {
-//     color: #545454;
-//     &--outline
-//     {
-//         &::before
-//         {
-//             line-height: 2;
-//             display: inline-block;
-//         }
-//         &:hover
-//         {
-//             display: none;
-//         }
-//     }
-// }
-    
+
+.favoriteIcon:before {
+    content: '\f004';
+    color: $FontColor;
+    font-size: 1.5rem;
+    transition: all .25s;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 200;
+  }
+  
+  .favoriteIcon:hover:before
+  {
+    content: '\f004';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: $PrimaryColor;
+  }
+
+  .placeInMiddle
+  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
