@@ -26,3 +26,26 @@
         opacity: 1;
     }
 }
+
+
+/*FadeIn animation*/
+.fadein 
+{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadein 1.2s ease forwards;
+}
+@keyframes fadein 
+{
+    100% 
+    {  
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Definition of Delay*/
+.menu01 {animation-delay: .3s;}
+.menu02 {animation-delay: .6s;}
+.menu03 {animation-delay: .9s;}
+.menu04 {animation-delay: 1.2s;}
