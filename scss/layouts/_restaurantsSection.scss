@@ -30,16 +30,7 @@
             font-size: 2rem;
             height: auto;
         }
-    }
-    // @include responsiveness('large') 
-    // {
-        
-    //     h2
-    //     {
-           
-    //     }
-    // }
-    
+    }   
 }
 .restaurants
 {
@@ -90,12 +81,10 @@
         border-radius: $borderRadiusCard $borderRadiusCard 0 0;
         object-fit: cover;
         height: 25vh;
-        // box-shadow: $boxShadowCard;
 
         @include responsiveness('large')
         {
             height: 13rem;
-
         }
     }
     .textOnImage
@@ -119,7 +108,6 @@
         transform: scale(1.02);
         box-shadow: $boxShadowCardHover;
     }
-
 }
 
 .restaurantInfo
@@ -130,7 +118,6 @@
     {
         font-weight: 500;
         font-size: 1.2rem;
-
     }
     .cityName
     {
@@ -144,8 +131,7 @@
         .restautantsName
         {
             font-size: 1.2rem;
-            padding: .2rem 0 .2rem .2rem;
-            
+            padding: .2rem 0 .2rem .2rem; 
         }
         .cityName
         {
@@ -162,7 +148,6 @@
     justify-content: space-between;
     padding: .7rem;
     border-radius: 0 0 $borderRadiusCard $borderRadiusCard;
-    // box-shadow: $boxShadowCard;
 }
 
 .favoriteIcon
@@ -187,7 +172,6 @@
                 transform: scale(1);
                 z-index: 1000;
                 opacity: 1;
-                
             }
         }
         &--solid

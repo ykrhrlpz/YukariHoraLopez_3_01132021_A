@@ -1,4 +1,51 @@
+// Loading Animation
+@keyframes bounce 
+{
+  to 
+  {
+    opacity: 0.3;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
 
+
+@keyframes loader 
+{
+  0% 
+  {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: white;
+
+  }
+  70%
+  {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    opacity: 1;
+ 
+  }
+  90%
+  {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+    opacity: 0.1;
+ 
+  }
+  100% 
+  { 
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 /*FadeIn animation*/
 .fadein 
@@ -23,82 +70,27 @@
 .menu04 {animation-delay: 1.2s;}
 
 
-// @keyframes like-icon
-// {
-//     0%
-//     {
-//         width: 2rem;
-//         height: 2rem;
-//         background: linear-gradient(pink, yellow);
-//         transform: translateX(-20px);
-//     }
-    
-//     100%
-//     {
-//         transform: translateX(20px);
-        
-//     }
-// }
+@keyframes rotate
+{
+    0%
+    {
+        transform: rotate(0deg) ;
 
-// .like-icon 
-// {
-  
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
 
-//     animation: like-icon 1.2s ease forwards;
-// }
-
-// .restaurant
-// {
-//     position: relative;
-//     overflow: hidden;
-
-//     .middle-two 
-//     {
-//         position: absolute;
-//         // bottom: 0;
-//         // // left: calc(100% - 5rem);
-//         // right: 0;
-//         // background-color: linear-gradient(pink, yellow);
-//         // width: 2rem;
-//         // height: 2rem;
-//         // transform-origin: 100% 50%;
-
-//         z-index: 10;
-
-//         // opacity: 0;
-//     }
-
-//     .background-two
-//     {
-//         z-index: 1;
-//         background-color: white;
-//         height: 2rem;
-//         width: 2rem;
-//         position: relative; 
-   
-//     }
-//     .favoriteIcon
-//     {
-//         z-index: 30;
-//         position: absolute;
-//         // top: 0;
-//         // left: 0;
-//         // height: 5rem;
-//         // width: 50rem;
-       
-       
-        
-//     }
-
-//    .favoriteIcon:hover:before
-//    { 
-
-      
-//        .middle-two  
-//        {
-//            animation: like-icon 1.2s ease forwards;
-//        }
-//    }
-  
-// }
-
+@keyframes slideUp
+{
+    0%
+    {
+        transform: scaleY(-10px);
+    }
+    100%
+    {
+        transform: scaleY(0px);
+    }
+}

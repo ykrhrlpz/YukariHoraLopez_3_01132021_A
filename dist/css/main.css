@@ -45,6 +45,27 @@
           animation-delay: 0.4s;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: #3f3e3e;
+}
+
+.pl-regular {
+  padding-left: 1.5rem;
+}
+
+.pl-small {
+  padding-left: 1rem;
+}
+
+.pb-small {
+  padding-bottom: .4rem;
+}
+
+.mt-regular {
+  margin-top: 1.5rem;
+}
+
 @-webkit-keyframes bounce {
   to {
     opacity: 0.3;
@@ -121,27 +142,6 @@
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  color: #3f3e3e;
-}
-
-.pl-regular {
-  padding-left: 1.5rem;
-}
-
-.pl-small {
-  padding-left: 1rem;
-}
-
-.pb-small {
-  padding-bottom: .4rem;
-}
-
-.mt-regular {
-  margin-top: 1.5rem;
-}
-
 /*FadeIn animation*/
 .fadein {
   opacity: 0;
@@ -186,6 +186,50 @@ body {
 .menu04 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: scaleY(-10px);
+            transform: scaleY(-10px);
+  }
+  100% {
+    -webkit-transform: scaleY(0px);
+            transform: scaleY(0px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: scaleY(-10px);
+            transform: scaleY(-10px);
+  }
+  100% {
+    -webkit-transform: scaleY(0px);
+            transform: scaleY(0px);
+  }
 }
 
 .header {
@@ -863,8 +907,8 @@ ol li::before {
   letter-spacing: .5px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
   width: 12rem;
   margin: 0 auto;
 }
@@ -1083,6 +1127,8 @@ ol li::before {
   width: 100%;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 @media (min-width: 1200px) {
@@ -1105,8 +1151,8 @@ ol li::before {
   z-index: 10;
   -webkit-transform: translateX(6rem);
           transform: translateX(6rem);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
   opacity: 0;
 }
 
@@ -1171,8 +1217,8 @@ ol li::before {
   display: flex;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
   font-size: .9rem;
 }
 
@@ -1199,22 +1245,25 @@ ol li::before {
 .menuCard:hover .menuCard__right {
   -webkit-transform: translateX(-4rem);
           transform: translateX(-4rem);
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  background-color: #fff;
 }
 
 .menuCard:hover .fa-check-circle {
-  -webkit-animation: rotate .5s linear 1;
-          animation: rotate .5s linear 1;
+  -webkit-animation: rotate .3s linear 1;
+          animation: rotate .3s linear 1;
 }
 
 .menuCard:hover .point {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 9rem;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
+  width: 11rem;
+}
+
+@media (min-width: 760px) {
+  .menuCard:hover .point {
+    width: 30rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1233,49 +1282,5 @@ ol li::before {
           transform: translate(-50%, -50%);
   white-space: nowrap;
   z-index: 10;
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    -webkit-transform: scaleY(-10px);
-            transform: scaleY(-10px);
-  }
-  100% {
-    -webkit-transform: scaleY(0px);
-            transform: scaleY(0px);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    -webkit-transform: scaleY(-10px);
-            transform: scaleY(-10px);
-  }
-  100% {
-    -webkit-transform: scaleY(0px);
-            transform: scaleY(0px);
-  }
 }
 /*# sourceMappingURL=main.css.map */
