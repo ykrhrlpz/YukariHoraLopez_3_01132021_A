@@ -12,7 +12,7 @@
         object-fit: cover;
         @include responsiveness('large')
         {
-            height: 40vh;
+            height: 50vh;
         }
     }
 
@@ -25,10 +25,11 @@
     margin-bottom: -7rem;
     @include responsiveness('large')
     {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    gap: 4rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        gap: 4rem;
+        margin-bottom: -4rem;
     }
     .title
     {
@@ -43,10 +44,6 @@
         letter-spacing: .7px;
         font-size: 1.2rem;
         width: 85%;
-        .favoriteIcon
-        {
-            
-        }
         @include responsiveness('large')
         {
             width: 50rem;
@@ -63,7 +60,7 @@
         margin-bottom: 3rem;
         @include responsiveness('large')
         {
-            width: 50%;
+            width: 50rem;
             margin: 0 auto;
             display: flex;
             flex-flow: column wrap;
@@ -87,6 +84,10 @@
             padding-top: .5rem; /* This creates some space between the element and the border. */
             border-bottom: 3px solid darken($TertiaryColor, 10%); /* This creates the border. Replace black with whatever color you want. */
         }
+        @include responsiveness('large') 
+        {
+            width: 50rem;
+        }
     }
 }
 .button
@@ -104,7 +105,10 @@
     overflow: hidden;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-
+    @include responsiveness('large') 
+    {
+        width: 50rem;
+    }
     .middle 
     {
         position: absolute;
@@ -127,10 +131,13 @@
         z-index: 1;
         background-color: white;
         height: 5rem;
-        width: 50rem;
+        width: 100%;;
         position: relative;
         border-radius: 16px; 
-   
+        @include responsiveness('large') 
+        {
+            width: 50rem;
+        }
     }
     .card
     {
@@ -140,10 +147,14 @@
         left: 0;
         height: 5rem;
         width: 100%;
-        // width: 50rem;
+     
         border-radius: 16px;
         // overflow: hidden;
-       
+        @include responsiveness('large') 
+        {
+            width: 50rem;
+        }
+
         .menuCard__left
         {
             display: flex;
@@ -210,6 +221,10 @@
             text-overflow: ellipsis;
             width: 9rem;
             transition: all 3s ease;
+            @include responsiveness('large') 
+            {
+                width: 30rem;
+            }
         }
       
     }
