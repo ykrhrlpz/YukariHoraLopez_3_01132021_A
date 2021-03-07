@@ -31,15 +31,28 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-       
+        align-items: center;
         margin: 0 auto;
         font-family: $LogoTitleFont;
         letter-spacing: .7px;
         font-size: 1.2rem;
         width: 85%;
+        &--enchanted
+        {
+            font-size: 1.1rem;
+            @include responsiveness('medium')
+            {
+                font-size: 1.5rem;
+            }
+            @include responsiveness('large')
+            {
+                font-size: 1.5rem;
+            }
+        }
         @include responsiveness('large')
         {
             width: 50rem;
+            padding-bottom: 0;
         }
     }
 

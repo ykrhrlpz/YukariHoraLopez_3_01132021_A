@@ -62,7 +62,7 @@
     box-shadow: $boxShadowCard;
     border-radius: $borderRadiusCard;
     transition: .25s;
-    min-width: 20rem;
+    min-width: 18rem;
     @include responsiveness('medium') 
     {
         width: 45vw;

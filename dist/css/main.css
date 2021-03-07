@@ -145,23 +145,38 @@ body {
 /*FadeIn animation*/
 .fadein {
   opacity: 0;
-  -webkit-transform: translateY(20px);
-          transform: translateY(20px);
-  -webkit-animation: fadein 1.2s ease forwards;
-          animation: fadein 1.2s ease forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  -webkit-animation: fadein 1.25s ease-in-out forwards;
+          animation: fadein 1.25s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
   100% {
     opacity: 1;
+    visibility: visible;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 }
 
 @keyframes fadein {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
   100% {
     opacity: 1;
+    visibility: visible;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -186,6 +201,11 @@ body {
 .menu04 {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
+}
+
+.menu05 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 @-webkit-keyframes rotate {
@@ -646,7 +666,7 @@ ol li::before {
   border-radius: 12px;
   -webkit-transition: .25s;
   transition: .25s;
-  min-width: 20rem;
+  min-width: 18rem;
 }
 
 @media (min-width: 760px) {
@@ -919,6 +939,10 @@ ol li::before {
   }
 }
 
+.primaryButton:focus {
+  outline: none;
+}
+
 .primaryButton:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#fface8), to(#ae80e5));
   background: linear-gradient(#fface8, #ae80e5);
@@ -1039,6 +1063,9 @@ ol li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   font-family: "Shrikhand", cursive;
   letter-spacing: .7px;
@@ -1046,9 +1073,26 @@ ol li::before {
   width: 85%;
 }
 
+.mainContainer .title--enchanted {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 760px) {
+  .mainContainer .title--enchanted {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainContainer .title--enchanted {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .mainContainer .title {
     width: 50rem;
+    padding-bottom: 0;
   }
 }
 

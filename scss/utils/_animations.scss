@@ -51,14 +51,24 @@
 .fadein 
 {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadein 1.2s ease forwards;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    // transform: translateY(20px);
+    animation: fadein 1.25s ease-in-out forwards;
 }
 @keyframes fadein 
 {
+    0% 
+    {  
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
     100% 
     {  
         opacity: 1;
+        visibility: visible;
         transform: translateY(0);
     }
 }
@@ -68,6 +78,7 @@
 .menu02 {animation-delay: .6s;}
 .menu03 {animation-delay: .9s;}
 .menu04 {animation-delay: 1.2s;}
+.menu05 {animation-delay: 1.5s;}
 
 
 @keyframes rotate
