@@ -14,34 +14,53 @@
     }
     &__heading
     {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding: 2rem 0 1.5rem 1rem;
-        
-    }
-    @include responsiveness('large') 
-    {
-        height: 80vh;
-        h2
+        @include responsiveness('medium')
         {
             text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        @include responsiveness('large')
+        {
+            text-align: center;
+            font-size: 2rem; 
+            text-align: center;
             padding: 3rem 0;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            height: auto;
         }
     }
+    // @include responsiveness('large') 
+    // {
+        
+    //     h2
+    //     {
+           
+    //     }
+    // }
     
 }
 .restaurants
 {
+    @include responsiveness('medium') 
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
     @include responsiveness('large') 
     {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         gap: 4rem;
-        margin-bottom: 4rem;
+        margin-bottom: 5rem;
     }
 }
-
 
 .restaurant
 {
@@ -50,19 +69,26 @@
     position: relative;
     margin-bottom: 1rem;
     box-shadow: $boxShadowCard;
+    border-radius: $borderRadiusCard;
     transition: .25s;
+    @include responsiveness('medium') 
+    {
+        width: 45vw;
+        height: auto;
+        margin: 0;
+    }
     @include responsiveness('large') 
     {
         width: 18vw;
         height: auto;
         margin: 0;
     }
-    img
+    &__img
     {
         width: 100%;
         border-radius: $borderRadiusCard $borderRadiusCard 0 0;
         object-fit: cover;
-        height: 15vh;
+        height: 25vh;
         // box-shadow: $boxShadowCard;
 
         @include responsiveness('large')
@@ -98,13 +124,18 @@
 .restaurantInfo
 {
     letter-spacing: .1px;
-   
+    .restautantsName
+    {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
     .cityName
     {
-        font-weight: 100;
+        font-weight: 300;
         padding-top: 4px;
-        font-size: .9rem;
+        font-size: 1rem;
     }
+  
     @include responsiveness('large') 
     {
         .restautantsName
@@ -131,27 +162,55 @@
     // box-shadow: $boxShadowCard;
 }
 
+.favoriteIcon
+{
+    position: relative;
+    .icon 
+    {
+        &--outline
+        {
+            
+            color: $FontColor;
+            font-size: 1.5rem;
+            z-index: 1;
+            transition: .7s ease-in;
+            cursor: pointer;
+            &:hover
+            {
+                opacity: 0;
+            }
+            &:hover + .icon--solid
+            {
+                transform: scale(1);
+                z-index: 1000;
+                opacity: 1;
+                
+            }
+        }
+        &--solid
+        {       
+            position: absolute;
+        
+            top: 0;
+            right: 0;
+            opacity: 0;
+            font-size: 1.5rem;
+            z-index: 10;
+            transform: scale(0);
+            transition: .3s ease-in;
+            &.fa-gradient {
+                background: -webkit-gradient(linear, left top, left bottom, from($PrimaryColor), to($SecondaryColor));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+             
+    }    
+}
 
-.favoriteIcon:before {
-    content: '\f004';
-    color: $FontColor;
-    font-size: 1.5rem;
-    transition: all .25s;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 200;
-  }
-  
-  .favoriteIcon:hover:before
-  {
-    content: '\f004';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    color: $PrimaryColor;
-  }
-
-  .placeInMiddle
-  {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+.placeInMiddle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

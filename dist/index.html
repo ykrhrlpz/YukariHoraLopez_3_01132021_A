@@ -12,9 +12,11 @@
         <div></div>
         <div></div>
         <div></div>
-      </div>
+    </div>
     <header class="header">
-        <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
+        <div class="header__img">
+            <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
+        </div>
         <div class="location">
             <i class="fas fa-map-marker-alt"></i>
             <span>Paris, Belleville</span>
@@ -28,7 +30,7 @@
             <p class="hero__byline">Discover top-of-the-art restaurants we picked for you</p>
             <button class="primaryButton">Explore our restaurants</button>
         </div>
-    </section>
+    </section> 
 
     <section class="process">
         <h2 class="process__heading">How it works</h2>
@@ -40,12 +42,12 @@
     </section>
 
     <section class="restaurantSection">
-        <h2 class="restaurants__heading">Restaurants</h2>
+        <h2 class="restaurantSection__heading">Restaurants</h2>
         <div class="restaurants">
             <a href="#">
                 <div class="restaurant">
                     <div>
-                        <img src="./img/restaurants/theFullPalette.jpg" alt="The Full Pallette Image">
+                        <img class="restaurant__img" src="./img/restaurants/theFullPalette.jpg" alt="The Full Pallette Image">
                         <div class="textOnImage">New</div>
                     </div>
                     <div class="flexCard">
@@ -54,7 +56,10 @@
                             <p class="cityName">New York</p>
                         </div>
                         <div class="placeInMiddle">
-                            <div class="favoriteIcon"></div>
+                            <div class="favoriteIcon">　
+                                <i class="icon icon--outline far fa-heart"></i>
+                                <i class="icon--solid fas fa-heart fa-gradient"></i>
+                            </div>
                         </div>
                         
                     </div>
@@ -64,7 +69,7 @@
             <a href="#">
                 <div class="restaurant">
                     <div>
-                        <img src="./img/restaurants/theEnchantedPlate.jpg" alt="The Enchanted Pallette Image">
+                        <img class="restaurant__img" src="./img/restaurants/theEnchantedPlate.jpg" alt="The Enchanted Pallette Image">
                         <div class="textOnImage">New</div>
                     </div>
                     <div class="flexCard">
@@ -73,7 +78,10 @@
                             <p class="cityName">New York</p>
                         </div>
                         <div class="placeInMiddle">
-                            <div class="favoriteIcon"></div>
+                            <div class="favoriteIcon">　
+                                <i class="icon icon--outline far fa-heart"></i>
+                                <i class="icon--solid fas fa-heart fa-gradient"></i>
+                            </div>
                         </div>
                         
                     </div>
@@ -83,7 +91,7 @@
             <a href="./bastille.html">
                 <div class="restaurant">
                     <div>
-                        <img src="./img/restaurants/bastille.jpg" alt="Bastille Image">
+                        <img class="restaurant__img" src="./img/restaurants/bastille.jpg" alt="Bastille Image">
                         <div class="textOnImage">New</div>
                     </div>
                     <div class="flexCard">
@@ -92,7 +100,10 @@
                             <p class="cityName">New York</p>
                         </div>
                         <div class="placeInMiddle">
-                            <div class="favoriteIcon"></div>
+                            <div class="favoriteIcon">　
+                                <i class="icon icon--outline far fa-heart"></i>
+                                <i class="icon--solid fas fa-heart fa-gradient"></i>
+                            </div>
                         </div>
                         
                     </div>
@@ -102,7 +113,7 @@
             <a href="#">
                 <div class="restaurant">
                     <div>
-                        <img src="./img/restaurants/leGourmand.jpg" alt="Le Gourmand Image">
+                        <img class="restaurant__img" src="./img/restaurants/leGourmand.jpg" alt="Le Gourmand Image">
                         <div class="textOnImage">New</div>
                     </div>
                     <div class="flexCard">
@@ -111,7 +122,10 @@
                             <p class="cityName">New York</p>
                         </div>
                           <div class="placeInMiddle">
-                            <div class="favoriteIcon"></div>
+                            <div class="favoriteIcon">　
+                                <i class="icon icon--outline far fa-heart"></i>
+                                <i class="icon--solid fas fa-heart fa-gradient"></i>
+                            </div>
                         </div>
                         
                     </div>
@@ -121,11 +135,24 @@
     </section>
     
     <footer class="footerSection">
-        <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
-        <div><i class="fas fa-utensils"></i><span class="pl-small">Suggest a restaurant</span></div>
-        <div><i class="fas fa-hands-helping"></i></i><span class="pl-small">Become a partner</span></div>
-        <div class="footerSection__menu--thin">Legal</div>
-        <div class="footerSection__menu--thin contact"><a href = "mailto: abc@example.com">Contact</a></div>
+        <div class="footerSection__img">
+            <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
+        </div>
+        <div class="footerSection__menu">
+            <div><i class="fas fa-utensils"></i><span class="pl-small">Suggest a restaurant</span></div>
+            <div><i class="fas fa-hands-helping"></i></i><span class="pl-small">Become a partner</span></div>
+            <div class="footerSection__menu--thin">Legal</div>
+            <div class="footerSection__menu--thin contact"><a href = "mailto: abc@example.com">Contact</a></div>
+        </div>
     </footer>
+    <!-- <footer class="footerSection">
+        <img src="./img/ohmyfood@2x.svg" alt="Company Logo">
+        <div class="footerSection__menu">
+            <div><i class="fas fa-utensils"></i><span class="pl-small">Suggest a restaurant</span></div>
+            <div><i class="fas fa-hands-helping"></i></i><span class="pl-small">Become a partner</span></div>
+            <div class="footerSection__menu--thin">Legal</div>
+            <div class="footerSection__menu--thin contact"><a href = "mailto: abc@example.com">Contact</a></div>
+        </div>
+    </footer> -->
 </body>
 </html>

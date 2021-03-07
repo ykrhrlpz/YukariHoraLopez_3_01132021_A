@@ -1,29 +1,40 @@
 .process
 {
     margin: 0 1rem 3rem 1rem;
-    padding-top: 1.4rem;
+    padding-top: 1rem;
     &__heading
     {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding: 2rem 0 1.5rem 0;
+        @include responsiveness('medium')
+        {
+            text-align: center;
+        }
         @include responsiveness('large') 
         {
             text-align: center;
             padding: 3rem 0;
-            font-size: 1.5rem;
+            // font-size: 1.5rem;
+            font-size: 2rem;
         }
     }
     &__list
     {
         background-color: #F6F6F6;
         padding: 1.5rem 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
         border-radius: 1.5rem;
         width: 100%;
         box-shadow: 0 4px 10px rgba(0,0,0,.1);
+        font-weight: 500;
+        font-size: 1.1rem;
         &.activeList
         {
             background-color: rgba($PrimaryColor, .1);
+        }
+        @include responsiveness('medium')
+        {
+            width: 70%;
         }
         @include responsiveness('large')
         {
@@ -38,19 +49,40 @@
             color: $PrimaryColor;
         }
     }
-}
-
-@include responsiveness('large')
-{
     .procedure
     {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        gap: 4rem;
-        margin-bottom: 5rem;
+        @include responsiveness('medium')
+        {
+            
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        @include responsiveness('large')
+        {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 4rem;
+            margin-bottom: 5rem;
+        }
     }
 }
+
+// @include responsiveness('large')
+// {
+//     .procedure
+//     {
+//         display: flex;
+//         flex-flow: row wrap;
+//         justify-content: center;
+//         gap: 4rem;
+//         margin-bottom: 5rem;
+//     }
+// }
 
 ol 
 {

@@ -1,31 +1,3 @@
-@keyframes like-outline
-{
-    0%
-    {
-       opacity: 1;
-       transform: translateX(-20px);
-    }
-    
-    100%
-    {
-        opacity: 0;
-        
-    }
-}
-
-@keyframes like-solid
-{
-    0%
-    {
-        opacity: 0;
-        
-    }
-    
-    100%
-    {
-        opacity: 1;
-    }
-}
 
 
 /*FadeIn animation*/
@@ -49,3 +21,84 @@
 .menu02 {animation-delay: .6s;}
 .menu03 {animation-delay: .9s;}
 .menu04 {animation-delay: 1.2s;}
+
+
+// @keyframes like-icon
+// {
+//     0%
+//     {
+//         width: 2rem;
+//         height: 2rem;
+//         background: linear-gradient(pink, yellow);
+//         transform: translateX(-20px);
+//     }
+    
+//     100%
+//     {
+//         transform: translateX(20px);
+        
+//     }
+// }
+
+// .like-icon 
+// {
+  
+
+//     animation: like-icon 1.2s ease forwards;
+// }
+
+// .restaurant
+// {
+//     position: relative;
+//     overflow: hidden;
+
+//     .middle-two 
+//     {
+//         position: absolute;
+//         // bottom: 0;
+//         // // left: calc(100% - 5rem);
+//         // right: 0;
+//         // background-color: linear-gradient(pink, yellow);
+//         // width: 2rem;
+//         // height: 2rem;
+//         // transform-origin: 100% 50%;
+
+//         z-index: 10;
+
+//         // opacity: 0;
+//     }
+
+//     .background-two
+//     {
+//         z-index: 1;
+//         background-color: white;
+//         height: 2rem;
+//         width: 2rem;
+//         position: relative; 
+   
+//     }
+//     .favoriteIcon
+//     {
+//         z-index: 30;
+//         position: absolute;
+//         // top: 0;
+//         // left: 0;
+//         // height: 5rem;
+//         // width: 50rem;
+       
+       
+        
+//     }
+
+//    .favoriteIcon:hover:before
+//    { 
+
+      
+//        .middle-two  
+//        {
+//            animation: like-icon 1.2s ease forwards;
+//        }
+//    }
+  
+// }
+

@@ -7,7 +7,16 @@
     border-radius: 2rem;
     cursor: pointer;
     letter-spacing: .5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 1s ease;
+    width: 12rem;
+    margin: 0 auto;
+    @include responsiveness('large') 
+    {
+        width: 22rem;
+    }
+
+
     &:hover
     {
         @include buttonHover;

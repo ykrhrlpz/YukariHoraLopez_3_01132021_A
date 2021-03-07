@@ -10,7 +10,7 @@ $FontColor: #3f3e3e;
 $PrimaryColor: #9356DC;
 $SecondaryColor: #FF79DA;
 $TertiaryColor: #99E2D0;
-$borderRadiusCard: 10px;
+$borderRadiusCard: 12px;
 $borderRadiusTextOnImage: 2px;
 $boxShadowCard: 0 10px 30px rgba(0, 0, 0, 0.25);
 $boxShadowCardHover: 0 15px 30px rgba(0, 0, 0, 0.25);
@@ -21,6 +21,7 @@ $tenLightenButtonColor: linear-gradient(lighten(#FF79DA, 10%), lighten(#9356DC, 
 $breakpoints: 
 (
   'small':  ( min-width:  767px ),
-  'medium': ( min-width:  992px ),
+  'medium': ( min-width:  760px ),
+  // 'medium': ( min-width:  992px ),
   'large':  ( min-width: 1200px )
 ) !default;
