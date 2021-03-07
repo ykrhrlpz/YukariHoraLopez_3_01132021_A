@@ -1,8 +1,8 @@
-.pageLayout
-{
-    display: flex;
-    flex-flow: column wrap;
-}
+// .pageLayout
+// {
+//     display: flex;
+//     flex-flow: column wrap;
+// }
 
 .main
 {
@@ -15,17 +15,14 @@
             height: 40vh;
         }
     }
-    // h3
-    // {
-    //     margin-left: 5%;
-    // }
+
 }
 .mainContainer
 {
     transform: translateY(-4rem);
     border-radius: 3rem 3rem 0 0;
     background-color: #F6F6F6;
-    margin-bottom: -4rem;
+    margin-bottom: -7rem;
     @include responsiveness('large')
     {
     display: flex;
@@ -36,14 +33,20 @@
     .title
     {
         padding-top: 3rem;
+        padding-bottom: 2.5rem;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
-        width: 50rem;
+       
         margin: 0 auto;
         font-family: $LogoTitleFont;
         letter-spacing: .7px;
         font-size: 1.2rem;
+        width: 85%;
+        .favoriteIcon
+        {
+            
+        }
         @include responsiveness('large')
         {
             width: 50rem;
@@ -57,6 +60,7 @@
         animation: slideUp .5s linear 1;
         width: 85%;
         margin: 0 auto;
+        margin-bottom: 3rem;
         @include responsiveness('large')
         {
             width: 50%;
@@ -72,7 +76,8 @@
     .desserts h3
     {
         font-weight: 300;
-        width: 50rem;
+        width: 100%;
+        // width: 50rem;
         margin: 0 auto;
         &::after {
             content: ""; /* This is necessary for the pseudo element to work. */ 
@@ -94,18 +99,20 @@
 .menuCard 
 {
     position: relative;
-    width: 50rem;
+    // width: 50rem;
     border-radius: 16px;
     overflow: hidden;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
     .middle 
     {
         position: absolute;
         bottom: 0;
-        left: calc(100% - 5rem);
+        left: calc(100% - 4rem);
         right: 0;
         background-color: $TertiaryColor;
-        width: 5rem;
+        width: 4rem;
         height: 100%;
         transform-origin: 100% 50%;
         border-radius: 0 16px 16px 0;
@@ -132,9 +139,11 @@
         top: 0;
         left: 0;
         height: 5rem;
-        width: 50rem;
+        width: 100%;
+        // width: 50rem;
         border-radius: 16px;
-        overflow: hidden;
+        // overflow: hidden;
+       
         .menuCard__left
         {
             display: flex;
@@ -143,12 +152,19 @@
             justify-content: center;
             padding-left: 1rem;
             height: 5rem;
-            .point
+            font-size: .9rem;
+            @include responsiveness('medium') 
             {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                font-size: 1.2rem;
             }
+           
+            // .point
+            // {
+            //     overflow: hidden;
+            //     white-space: nowrap;
+            //     text-overflow: ellipsis;
+            //     width: 15rem;
+            // }
    
         }
         .menuCard__right
@@ -157,12 +173,17 @@
             display: flex;
             transform: translateX(0);
             transition: all 1s ease;
+            font-size: .9rem;
+            @include responsiveness('medium') 
+            {
+                font-size: 1.2rem;
+            }
         }
     }
 
     &:hover 
     { 
-
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
         cursor: pointer;
         .middle 
         {
@@ -173,13 +194,22 @@
         }
         .menuCard__right
         {
-            transform: translateX(-5rem);
+            transform: translateX(-4rem);
             transition: all 1s ease;
         }
+       
 
         .fa-check-circle
         {
             animation: rotate .5s linear 1;
+        }
+        .point
+        {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 9rem;
+            transition: all 3s ease;
         }
       
     }

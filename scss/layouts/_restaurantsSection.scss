@@ -71,6 +71,7 @@
     box-shadow: $boxShadowCard;
     border-radius: $borderRadiusCard;
     transition: .25s;
+    min-width: 20rem;
     @include responsiveness('medium') 
     {
         width: 45vw;
@@ -124,10 +125,12 @@
 .restaurantInfo
 {
     letter-spacing: .1px;
+
     .restautantsName
     {
         font-weight: 500;
         font-size: 1.2rem;
+
     }
     .cityName
     {

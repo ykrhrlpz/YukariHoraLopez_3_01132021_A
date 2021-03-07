@@ -194,13 +194,13 @@ body {
   height: -moz-max-content;
   height: max-content;
   text-align: center;
+  width: 100vw;
 }
 
 .header__img {
   -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 4px;
-  width: 100vw;
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +212,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header__img__restaurant {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .header__menu {
@@ -597,6 +602,7 @@ ol li::before {
   border-radius: 12px;
   -webkit-transition: .25s;
   transition: .25s;
+  min-width: 20rem;
 }
 
 @media (min-width: 760px) {
@@ -880,6 +886,13 @@ ol li::before {
   padding: 1rem 4rem;
 }
 
+@media (min-width: 760px) {
+  .primaryButton__order {
+    width: 30vw;
+    font-size: 1.2rem;
+  }
+}
+
 @media (min-width: 1200px) {
   .primaryButton__order {
     width: 20vw;
@@ -931,16 +944,6 @@ ol li::before {
   font-weight: 700;
 }
 
-.pageLayout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-}
-
 .main img {
   width: 100%;
   -o-object-fit: cover;
@@ -958,7 +961,7 @@ ol li::before {
           transform: translateY(-4rem);
   border-radius: 3rem 3rem 0 0;
   background-color: #F6F6F6;
-  margin-bottom: -4rem;
+  margin-bottom: -7rem;
 }
 
 @media (min-width: 1200px) {
@@ -979,6 +982,7 @@ ol li::before {
 
 .mainContainer .title {
   padding-top: 3rem;
+  padding-bottom: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -989,11 +993,11 @@ ol li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 50rem;
   margin: 0 auto;
   font-family: "Shrikhand", cursive;
   letter-spacing: .7px;
   font-size: 1.2rem;
+  width: 85%;
 }
 
 @media (min-width: 1200px) {
@@ -1009,6 +1013,7 @@ ol li::before {
           animation: slideUp .5s linear 1;
   width: 85%;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 1200px) {
@@ -1034,7 +1039,7 @@ ol li::before {
 .mainContainer .mainDish h3,
 .mainContainer .desserts h3 {
   font-weight: 300;
-  width: 50rem;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1063,18 +1068,20 @@ ol li::before {
 
 .menuCard {
   position: relative;
-  width: 50rem;
   border-radius: 16px;
   overflow: hidden;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .menuCard .middle {
   position: absolute;
   bottom: 0;
-  left: calc(100% - 5rem);
+  left: calc(100% - 4rem);
   right: 0;
   background-color: #99E2D0;
-  width: 5rem;
+  width: 4rem;
   height: 100%;
   -webkit-transform-origin: 100% 50%;
           transform-origin: 100% 50%;
@@ -1102,9 +1109,8 @@ ol li::before {
   top: 0;
   left: 0;
   height: 5rem;
-  width: 50rem;
+  width: 100%;
   border-radius: 16px;
-  overflow: hidden;
 }
 
 .menuCard .card .menuCard__left {
@@ -1121,12 +1127,13 @@ ol li::before {
           justify-content: center;
   padding-left: 1rem;
   height: 5rem;
+  font-size: .9rem;
 }
 
-.menuCard .card .menuCard__left .point {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+@media (min-width: 760px) {
+  .menuCard .card .menuCard__left {
+    font-size: 1.2rem;
+  }
 }
 
 .menuCard .card .menuCard__right {
@@ -1138,9 +1145,18 @@ ol li::before {
           transform: translateX(0);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+  font-size: .9rem;
+}
+
+@media (min-width: 760px) {
+  .menuCard .card .menuCard__right {
+    font-size: 1.2rem;
+  }
 }
 
 .menuCard:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
   cursor: pointer;
 }
 
@@ -1153,8 +1169,8 @@ ol li::before {
 }
 
 .menuCard:hover .menuCard__right {
-  -webkit-transform: translateX(-5rem);
-          transform: translateX(-5rem);
+  -webkit-transform: translateX(-4rem);
+          transform: translateX(-4rem);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -1162,6 +1178,15 @@ ol li::before {
 .menuCard:hover .fa-check-circle {
   -webkit-animation: rotate .5s linear 1;
           animation: rotate .5s linear 1;
+}
+
+.menuCard:hover .point {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 9rem;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
 }
 
 .menuCard .text {
