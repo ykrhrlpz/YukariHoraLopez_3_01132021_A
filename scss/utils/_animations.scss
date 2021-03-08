@@ -55,11 +55,17 @@
     backface-visibility: hidden;
     overflow: hidden;
     // transform: translateY(20px);
-    animation: fadein 1.25s ease-in-out forwards;
+    animation: fadein 1.25s ease-in-out both;
 }
 @keyframes fadein 
 {
     0% 
+    {  
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+    }
+    1% 
     {  
         opacity: 0;
         visibility: hidden;
@@ -94,14 +100,3 @@
     }
 }
 
-@keyframes slideUp
-{
-    0%
-    {
-        transform: scaleY(-10px);
-    }
-    100%
-    {
-        transform: scaleY(0px);
-    }
-}
