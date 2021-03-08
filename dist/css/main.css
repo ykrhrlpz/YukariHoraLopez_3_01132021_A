@@ -67,7 +67,13 @@ body {
 }
 
 @-webkit-keyframes bounce {
-  to {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0.3;
     -webkit-transform: translate3d(0, -1rem, 0);
             transform: translate3d(0, -1rem, 0);
@@ -75,7 +81,13 @@ body {
 }
 
 @keyframes bounce {
-  to {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0.3;
     -webkit-transform: translate3d(0, -1rem, 0);
             transform: translate3d(0, -1rem, 0);
@@ -84,6 +96,12 @@ body {
 
 @-webkit-keyframes loader {
   0% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: white;
+  }
+  1% {
     width: 100vw;
     height: 100vh;
     opacity: 1;
@@ -114,6 +132,12 @@ body {
 
 @keyframes loader {
   0% {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: white;
+  }
+  1% {
     width: 100vw;
     height: 100vh;
     opacity: 1;
@@ -225,6 +249,10 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+  1% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -233,6 +261,10 @@ body {
 
 @keyframes rotate {
   0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  1% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }

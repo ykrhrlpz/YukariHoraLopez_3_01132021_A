@@ -1,7 +1,15 @@
 // Loading Animation
 @keyframes bounce 
 {
-  to 
+  0% 
+  {
+    opacity: 1;
+  }
+  1% 
+  {
+    opacity: 1;
+  }
+  100% 
   {
     opacity: 0.3;
     transform: translate3d(0, -1rem, 0);
@@ -17,7 +25,13 @@
     height: 100vh;
     opacity: 1;
     background-color: white;
-
+  }
+  1% 
+  {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: white;
   }
   70%
   {
@@ -90,6 +104,11 @@
 @keyframes rotate
 {
     0%
+    {
+        transform: rotate(0deg) ;
+
+    }
+    1%
     {
         transform: rotate(0deg) ;
 
