@@ -644,23 +644,6 @@ ol li::before {
   }
 }
 
-@media (min-width: 1200px) {
-  .restaurants {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 4rem;
-    margin-bottom: 5rem;
-  }
-}
-
 .restaurant {
   width: 90%;
   margin: 0 auto;
@@ -686,7 +669,8 @@ ol li::before {
   .restaurant {
     width: 18vw;
     height: auto;
-    margin: 0;
+    margin: 0 auto;
+    margin-left: 1rem;
   }
 }
 

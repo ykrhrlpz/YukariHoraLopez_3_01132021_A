@@ -37,21 +37,8 @@
     @include responsiveness('medium') 
     {
         @include FlexCenter;
-        // display: flex;
-        // flex-flow: row wrap;
-        // justify-content: center;
         gap: 2rem;
         margin-bottom: 4rem;
-    }
-
-    @include responsiveness('large') 
-    {
-        @include FlexCenter;
-        // display: flex;
-        // flex-flow: row wrap;
-        // justify-content: center;
-        gap: 4rem;
-        margin-bottom: 5rem;
     }
 }
 
@@ -75,7 +62,8 @@
     {
         width: 18vw;
         height: auto;
-        margin: 0;
+        margin: 0 auto;
+        margin-left: 1rem;
     }
     &__img
     {
