@@ -1,13 +1,13 @@
 .primaryButton
 {
-    background: $buttonColor;
+    background: $ButtonColor;
     border: none;
     color: #fff;
     padding: 1rem 1.3rem;
     border-radius: 2rem;
     cursor: pointer;
     letter-spacing: .5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: $ButtonShadow;
     transition: .25s ease;
     width: 12rem;
     margin: 0 auto;
@@ -20,10 +20,9 @@
         outline: none;
     }
 
-
     &:hover
     {
-        @include buttonHover;
+        @include ButtonHover;
     }
     
     &__order
@@ -33,15 +32,12 @@
         {
             width: 30vw;
             font-size: 1.2rem;
-
         }
         @include responsiveness('large') 
         {
             width: 20vw;
             max-width: 25rem;
-
         }
-
     }
     @include responsiveness('large') 
     {

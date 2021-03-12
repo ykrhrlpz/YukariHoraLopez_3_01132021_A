@@ -10,15 +10,26 @@ $FontColor: #3f3e3e;
 $PrimaryColor: #9356DC;
 $SecondaryColor: #FF79DA;
 $TertiaryColor: #99E2D0;
-$borderRadiusCard: 12px;
-$borderRadiusTextOnImage: 2px;
-$boxShadowCard: 0 10px 30px rgba(0, 0, 0, 0.25);
-$boxShadowCardHover: 0 15px 30px rgba(0, 0, 0, 0.25);
-$buttonColor: linear-gradient($SecondaryColor, $PrimaryColor);
-$tenLightenButtonColor: linear-gradient(lighten($SecondaryColor, 10%), lighten($PrimaryColor, 10%));
+$ButtonColor: linear-gradient($SecondaryColor, $PrimaryColor);
+$TenLightenButtonColor: linear-gradient(lighten($SecondaryColor, 10%), lighten($PrimaryColor, 10%));
+$FooterBackgroundColor: #545454;
+$BackgroundColor: #F6F6F6;
+
+//Border
+$BorderRadiusCard: 12px;
+$BorderRadiusTextOnImage: 2px;
+
+//Shadow
+$BoxShadowCard: 0 10px 30px rgba(0, 0, 0, 0.25);
+$BoxShadowCardHover: 0 15px 30px rgba(0, 0, 0, 0.25);
+$ButtonShadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+$HeaderShadow: 0 3px 15px rgba(0,0,0,.2);
+$ProcessListShadow: 0 4px 10px rgba(0,0,0,.1);
+$MenuCardShadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+$MenuCardShadowHover: 0 5px 10px rgba(0, 0, 0, 0.18);
 
 //Breakpoints
-$breakpoints: 
+$Breakpoints: 
 (
 
   'medium': ( min-width:  760px ),

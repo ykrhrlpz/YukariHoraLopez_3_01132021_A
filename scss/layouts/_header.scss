@@ -6,23 +6,15 @@
     width: 100vw;
     &__img
     {
-        box-shadow: 0 3px 15px rgba(0,0,0,.2);
+        box-shadow: $HeaderShadow;
         margin-bottom: 4px;
-        // width: 100vw;
         height: 4rem;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
+        @include FlexCenter(column);
         &__restaurant
         {
             box-shadow: none;
         }
     }
-    // img
-    // {
-    //     width: 9rem;
-    //     height: 4rem;
-    // }
     &__menu
     {
         display: grid;

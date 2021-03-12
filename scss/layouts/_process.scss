@@ -14,18 +14,17 @@
         {
             text-align: center;
             padding: 3rem 0;
-            // font-size: 1.5rem;
             font-size: 2rem;
         }
     }
     &__list
     {
-        background-color: #F6F6F6;
+        background-color: $BackgroundColor;
         padding: 1.5rem 2rem;
         margin-bottom: 1rem;
         border-radius: 1.5rem;
         width: 100%;
-        box-shadow: 0 4px 10px rgba(0,0,0,.1);
+        box-shadow: $ProcessListShadow;
         font-weight: 500;
         font-size: 1.1rem;
         &.activeList
@@ -43,7 +42,7 @@
     }
     .icon
     {
-        color: darken(#F6F6F6, 60%);
+        color: darken($BackgroundColor, 60%);
         &.active
         {
             color: $PrimaryColor;
@@ -53,36 +52,19 @@
     {
         @include responsiveness('medium')
         {
-            
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
+            @include FlexCenter(column);
             align-items: center;
             gap: 2rem;
             margin-bottom: 3rem;
         }
         @include responsiveness('large')
         {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            @include FlexCenter;
             gap: 4rem;
             margin-bottom: 5rem;
         }
     }
 }
-
-// @include responsiveness('large')
-// {
-//     .procedure
-//     {
-//         display: flex;
-//         flex-flow: row wrap;
-//         justify-content: center;
-//         gap: 4rem;
-//         margin-bottom: 5rem;
-//     }
-// }
 
 ol 
 {

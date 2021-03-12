@@ -1,103 +1,22 @@
-// .hero
-// {
-//     display: flex;
-//     justify-content: center;
-//     text-align: center;
-//     background-color: #F6F6F6;
-//     padding: 2.5rem;
-//     @include responsiveness('large')
-//     {
-//         background-image: url(../../dist/img/restaurants/bastille.jpg);
-//         color: #fff;
-//         height: 85vh;
-        
-//         &__background
-//         {
-//             background-color: #000;
-//             opacity: .5;
-//         }
-//     }
-//     @include responsiveness('medium')
-//     {
-//         background-image: url(../../dist/img/restaurants/bastille.jpg);
-//         color: #fff;
-//         // height: 30vh;
-//         padding: 8rem;
-//         // background-position: 50% 50%;
-//         background-size: cover;
-        
-        
-//         &__background
-//         {
-//             // background-color: #000;
-//             // opacity: .5;
-//             background-color: rgba(0, 0, 0, 0.5);
-            
-//         }
-//     }
-//     &__heading
-//     {
-//         // padding: 2rem 0;
-//         @include responsiveness('large')
-//         {
-//             font-size: 3rem;
-//             padding: 0;
-//             margin-bottom: 1.5rem;
-//         }
-//     }
-//     &__byline
-//     {
-//         // margin: 2rem 0;
-//         // padding: 0 2rem;
-//         font-weight: 300;
-//         @include responsiveness('large')
-//         {
-//             font-size: 1.7rem;
-//             letter-spacing: .3px;
-//             font-weight: 400;
-//             margin-bottom: 2rem;
-//         }
-//     }
-//     &__body
-//     {
-//         display: flex;
-//         gap: 2rem;
-//         flex-flow: column wrap;
-//         @include responsiveness('large')
-//         {
-//             // height: 80vh;
-//             display: flex;
-//             flex-flow: column wrap;
-//             justify-content: center;
-//             align-items: center;
-//         }
-//     }
-// }
 .hero
 {
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: $BackgroundColor;
     padding: 2.5rem;
     @include responsiveness('medium')
     {
         background-image: url(../../dist/img/restaurants/bastille.jpg);
         color: #fff;
-        // height: 30vh;
-        // padding: 8rem;
-        // background-position: 50% 50%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
         height: 30vh;
-        position: relative;
-        
+        position: relative;       
         &__background
         {
-            // background-color: #000;
-            // opacity: .5;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
@@ -107,7 +26,6 @@
             left:0;
             right:0;
             z-index: 5;
-            
         }
     }
     @include responsiveness('large')
@@ -136,7 +54,6 @@
     
     &__heading
     {
-        // padding: 2rem 0;
         @include responsiveness('large')
         {
             font-size: 2.2rem;
@@ -146,8 +63,6 @@
     }
     &__byline
     {
-        // margin: 2rem 0;
-        // padding: 0 2rem;
         font-weight: 300;
         @include responsiveness('large')
         {
@@ -171,16 +86,10 @@
             text-align: center;
             width: 100%;
             z-index: 8;
-        
         }
 
         @include responsiveness('large')
         {
-            // height: 80vh;
-            // display: flex;
-            // flex-flow: column wrap;
-            // justify-content: center;
-            // align-items: center;
             position: absolute;
             top: 50%;
             left: 50%;

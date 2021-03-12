@@ -14,7 +14,7 @@
 {
     transform: translateY(-4rem);
     border-radius: 3rem 3rem 0 0;
-    background-color: #F6F6F6;
+    background-color: $BackgroundColor;
     margin-bottom: -7rem;
     @include responsiveness('large')
     {
@@ -79,7 +79,6 @@
     {
         font-weight: 300;
         width: 100%;
-        // width: 50rem;
         margin: 0 auto;
         &::after {
             content: ""; /* This is necessary for the pseudo element to work. */ 
@@ -108,8 +107,8 @@
     border-radius: 16px;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transition: .25s;
+    box-shadow: $MenuCardShadow;
+    transition: .25s ease;
     @include responsiveness('large') 
     {
         width: 50rem;
@@ -136,7 +135,7 @@
         z-index: 1;
         background-color: white;
         height: 5rem;
-        width: 100%;;
+        width: 100%;
         position: relative;
         border-radius: 16px; 
         @include responsiveness('large') 
@@ -160,10 +159,8 @@
 
         .menuCard__left
         {
-            display: flex;
-            flex-flow: column wrap;
+            @include FlexCenter(column);
             gap: .8rem;
-            justify-content: center;
             padding-left: 1rem;
             height: 5rem;
             font-size: .9rem;
@@ -188,7 +185,7 @@
 
     &:hover 
     { 
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.18);
+        box-shadow: $MenuCardShadowHover;
         cursor: pointer;
         .middle 
         {

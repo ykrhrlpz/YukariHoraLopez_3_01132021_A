@@ -1,6 +1,6 @@
 .restaurantSection
 {
-    background: linear-gradient(#F6F6F6, #fff);
+    background: linear-gradient($BackgroundColor, #fff);
     padding-bottom: 3rem;
     padding-top: 1.6rem;
     @include responsiveness('large') 
@@ -36,18 +36,20 @@
 {
     @include responsiveness('medium') 
     {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        @include FlexCenter;
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: center;
         gap: 2rem;
         margin-bottom: 4rem;
     }
 
     @include responsiveness('large') 
     {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
+        @include FlexCenter;
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: center;
         gap: 4rem;
         margin-bottom: 5rem;
     }
@@ -59,9 +61,9 @@
     margin: 0 auto;
     position: relative;
     margin-bottom: 1rem;
-    box-shadow: $boxShadowCard;
-    border-radius: $borderRadiusCard;
-    transition: .25s;
+    box-shadow: $BoxShadowCard;
+    border-radius: $BorderRadiusCard;
+    transition: .25s ease;
     min-width: 18rem;
     @include responsiveness('medium') 
     {
@@ -78,7 +80,7 @@
     &__img
     {
         width: 100%;
-        border-radius: $borderRadiusCard $borderRadiusCard 0 0;
+        border-radius: $BorderRadiusCard $BorderRadiusCard 0 0;
         object-fit: cover;
         height: 25vh;
 
@@ -96,7 +98,7 @@
         color: darken($TertiaryColor, 40%);
         font-size: .8rem;
         padding: .3rem 1.5rem;
-        border-radius: $borderRadiusTextOnImage;
+        border-radius: $BorderRadiusTextOnImage;
         @include responsiveness('large') 
         {
             font-size: 1rem;
@@ -106,7 +108,7 @@
     &:hover
     {
         transform: scale(1.02);
-        box-shadow: $boxShadowCardHover;
+        box-shadow: $BoxShadowCardHover;
     }
 }
 
@@ -147,7 +149,7 @@
     flex: row wrap;
     justify-content: space-between;
     padding: .7rem;
-    border-radius: 0 0 $borderRadiusCard $borderRadiusCard;
+    border-radius: 0 0 $BorderRadiusCard $BorderRadiusCard;
 }
 
 .favoriteIcon
