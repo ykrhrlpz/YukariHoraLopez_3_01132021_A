@@ -38,6 +38,8 @@
         @include responsiveness('large')
         {
             width: 25%;
+            display: inline-block;
+            margin-left: 1.5rem;
         }
     }
     .icon
@@ -57,11 +59,12 @@
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        @include responsiveness('large')
+        @include responsiveness('large') 
         {
-            @include FlexCenter;
-            gap: 4rem;
+            width: 100vw;
             margin-bottom: 5rem;
+            display: inline-block;
+            text-align: center;
         }
     }
 }

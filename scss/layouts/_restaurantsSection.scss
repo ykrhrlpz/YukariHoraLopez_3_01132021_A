@@ -179,11 +179,9 @@
             {
                 background: -webkit-gradient(linear, left top, left bottom, from($PrimaryColor), to($SecondaryColor));
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                
+                -webkit-text-fill-color: transparent;    
             }
-        }
-             
+        }        
     }    
 }
 
