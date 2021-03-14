@@ -18,7 +18,7 @@
     &__menu
     {
         display: grid;
-        grid-template: 4rem 1fr / repeat(3, 1fr);
+        grid-template-columns: 4rem 1fr;
     }
     a
     {
@@ -39,6 +39,8 @@
         }
     }
 }
+
+
 
 .backIcon
 {

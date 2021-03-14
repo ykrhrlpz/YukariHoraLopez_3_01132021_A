@@ -134,7 +134,7 @@
 .flexCard
 {
     display: flex;
-    flex: row wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: .7rem;
     border-radius: 0 0 $BorderRadiusCard $BorderRadiusCard;
