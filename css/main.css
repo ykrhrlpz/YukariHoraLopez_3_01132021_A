@@ -825,8 +825,8 @@ ol li::before {
   .footerSection {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -891,8 +891,8 @@ ol li::before {
   .footerSection__menu {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[8];
-        grid-template-columns: repeat(8, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     text-align: right;

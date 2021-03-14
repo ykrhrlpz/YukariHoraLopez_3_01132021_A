@@ -19,7 +19,8 @@
     @include responsiveness('large')
     {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         align-content: center;
         .footerSection__img
@@ -57,7 +58,8 @@
         @include responsiveness('large')
         {
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            // grid-template-columns: repeat(8, 1fr);
             grid-template-rows: auto;
             text-align: right;
             justify-content: center;
