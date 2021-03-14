@@ -345,7 +345,7 @@ body {
 
 @media (min-width: 760px) {
   .hero {
-    background-image: url(../../dist/img/restaurants/bastille.jpg);
+    background-image: url("../img/restaurants/bastille.jpg");
     color: #fff;
     background-position: center;
     background-size: cover;
@@ -369,7 +369,7 @@ body {
 
 @media (min-width: 1200px) {
   .hero {
-    background-image: url(../../dist/img/restaurants/bastille.jpg);
+    background-image: url("../img/restaurants/bastille.jpg");
     color: #fff;
     background-position: center;
     background-size: cover;

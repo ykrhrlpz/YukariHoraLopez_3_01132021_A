@@ -7,7 +7,7 @@
     padding: 2.5rem;
     @include responsiveness('medium')
     {
-        background-image: url(../../dist/img/restaurants/bastille.jpg);
+        background-image: url("../img/restaurants/bastille.jpg");
         color: #fff;
         background-position: center;
         background-size: cover;
@@ -30,7 +30,7 @@
     }
     @include responsiveness('large')
     {
-        background-image: url(../../dist/img/restaurants/bastille.jpg);
+        background-image: url("../img/restaurants/bastille.jpg");
         color: #fff;
         background-position: center;
         background-size: cover;
